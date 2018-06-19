@@ -73,8 +73,8 @@ gulp.task('webserver', function () {
     browserSync(config);
 });
 
-/*Пути к файлам kovka5*/
-var kovka5 = {
+/*Пути к файлам mebel5*/
+var mebel5 = {
     build: {
         html: 'build/',
         js: 'build/js/',
@@ -84,8 +84,8 @@ var kovka5 = {
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/kovka5.js',
-        style: 'src/scss/kovka5.scss',
+        js: 'src/js/mebel5.js',
+        style: 'src/scss/mebel5.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -100,27 +100,27 @@ var kovka5 = {
 
 /*Собираем html*/
 gulp.task('html:build', function () {
-    gulp.src(kovka5.src.html)
+    gulp.src(mebel5.src.html)
         .pipe(plugins.rigger())
-        .pipe(gulp.dest(kovka5.build.html))
+        .pipe(gulp.dest(mebel5.build.html))
         .pipe(reload({stream: true}));
 });
 
 /*Собираем javascript*/
 gulp.task('js:build', function () {
-    js(kovka5);
+    js(mebel5);
 });
 /*Собираем стили*/
 gulp.task('style:build', function () {
-    css(kovka5);
+    css(mebel5);
 });
 /*Собираем картинки*/
 gulp.task('image:build', function () {
-    image(kovka5);
+    image(mebel5);
 });
 /*Шрифты*/
 gulp.task('fonts:build', function() {
-    fonts(kovka5);
+    fonts(mebel5);
 });
 
 /*Одноразовая сборка*/
@@ -133,23 +133,23 @@ gulp.task('build', [
 ]);
 /*Следим за изменениями*/
 gulp.task('watch', function(){
-    plugins.watch([kovka5.watch.html], function(event, cb) {
+    plugins.watch([mebel5.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
-    plugins.watch([kovka5.watch.style], function(event, cb) {
+    plugins.watch([mebel5.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
-    plugins.watch([kovka5.watch.js], function(event, cb) {
+    plugins.watch([mebel5.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-    plugins.watch([kovka5.watch.img], function(event, cb) {
+    plugins.watch([mebel5.watch.img], function(event, cb) {
         gulp.start('image:build');
     });
-    plugins.watch([kovka5.watch.fonts], function(event, cb) {
+    plugins.watch([mebel5.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });
 });
-/*############### kovka5 #################*/
+/*############### mebel5 #################*/
 
 
 /*Финишь запуск всего*/

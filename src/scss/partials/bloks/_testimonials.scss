@@ -1,4 +1,15 @@
 .testimonials{
+	position: relative;
+	margin: 90px auto;
+	h2{
+		color: #75442A;
+		font-size: 36px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-bottom: 30px;
+	}
 	&__item{
 		position: relative;
 		margin-bottom: 60px;
@@ -21,5 +32,21 @@
 	}
 	p{
 		font-size: 14px;
+	}
+	&__btn {
+		display: block;
+		background: #75442A;
+		width: 100%;
+		max-width: 255px;
+		height: 45px;
+		margin: 10px auto;
+		color: #fff;
+		font-size: 18px;
+		line-height: 45px;
+		font-weight: bold;
+		text-align: center;
+		outline:none;
+		border: none;
+		border-radius: 20px;
 	}
 }

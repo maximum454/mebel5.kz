@@ -33,8 +33,24 @@
 		text-decoration: none;
 		margin-bottom: 30px;
 	}
+	&__price{
+		color: #75442A;
+		font-size: 18px;
+		font-weight: bold;
+		position: relative;
+		padding-left: 15px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url("../img/price.svg");
+			width: 16px;
+			height: 16px;
+		}
+	}
 	&__btn{
-		background: #2E2E2E;
+		background: #75442A;
 		width: 255px;
 		height: 45px;
 		color: #fff;
