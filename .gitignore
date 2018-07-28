@@ -20,7 +20,6 @@ nbproject
 .settings
 # Add any directories, files, or patterns you don't want to be tracked by version control
 node_modules
-build
 .DS_Store
 src/.DS_Store
 src/js/.DS_Store
