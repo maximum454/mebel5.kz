@@ -28,7 +28,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <?$APPLICATION->ShowHead()?>
-    <?$APPLICATION->SetAdditionalCSS("/bitrix/templates/".SITE_TEMPLATE_ID."/css/mebel5.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/bitrix/templates/".SITE_TEMPLATE_ID."/css/kovka5.css");?>
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
@@ -36,14 +36,14 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><img class="header__logo" src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt=""></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><div class="header__logo">АманСтройГрупп</div></div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="header__location">
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/location.svg" alt="">Астана, ул. Жанажол, 4
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <a class="header__phone" href="tel:+77476760549"><img src="<?=SITE_TEMPLATE_PATH?>/img/phone.svg" alt="">+7 747 676 05 49</a>
+                    <a class="header__phone" href="https://wa.me/77476760549"><img src="<?=SITE_TEMPLATE_PATH?>/img/phone.svg" alt="">+7 777 591 51 51</a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <button class="header__btn popap_box" data-toggle="modal" data-target="#exampleModal">ЗАКАЗАТЬ ЗВОНОК</button>
@@ -58,7 +58,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="modal__header">Заказать обратный звонок</div>
+                        <div class="modal__header">ЗАказать обратный звонок</div>
                     </div>
                     <div class="row">
                         <div class="modal__item col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -104,6 +104,7 @@
             "EDIT_TEMPLATE" => ""
         )
     );?>
+
     <main class="main">
         <div class="container">
             <div class="row">
@@ -115,15 +116,18 @@
                 #WORK_AREA#
             </div>
         </div>
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "",
-            Array(
-                "AREA_FILE_SHOW" => "page",
-                "AREA_FILE_SUFFIX" => "main-catalog",
-                "EDIT_TEMPLATE" => ""
+
+        <?$APPLICATION->IncludeComponent("bitrix:main.include", "", array(
+            "AREA_FILE_SHOW" => "page",
+            "AREA_FILE_SUFFIX" => "main-catalog",
+            "EDIT_TEMPLATE" => ""
+        ),
+            false,
+            array(
+                "ACTIVE_COMPONENT" => "N"
             )
         );?>
+
         <?$APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "",
@@ -133,11 +137,13 @@
                 "EDIT_TEMPLATE" => ""
             )
         );?>
+
+
         <div class="feedback">
             <div class="container">
                 <div class="row">
                     <div class="feedback__inner">
-                        <h2>ВЫЗВАТЬ ЗАМЕРЩИКА БЕСПЛАТНО</h2>
+                        <h2>СВЯЗАТЬСЯ С МЕНЕЖЕРОМ</h2>
                         <h5>оставьте свои контактные данные и мы вам обязательно перезвоним</h5>
                         <form action="" class="feedback__form">
                             <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-4 col-xs-12">
@@ -147,7 +153,7 @@
                                 <input type="text" placeholder="Контактный телефон">
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                                <input type="submit" value="ВЫЗВАТЬ ЗАМЕРЩИКА">
+                                <input type="submit" value="ЗАКАЗАТЬ ЗВОНОК">
                             </div>
                         </form>
                     </div>
@@ -155,79 +161,109 @@
             </div>
         </div>
         <?$APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "",
-            Array(
-                "AREA_FILE_SHOW" => "page",
-                "AREA_FILE_SUFFIX" => "testimonials",
-                "EDIT_TEMPLATE" => ""
-            )
-        );?>
-
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "",
-            Array(
-                "AREA_FILE_SHOW" => "page",
-                "AREA_FILE_SUFFIX" => "banners",
-                "EDIT_TEMPLATE" => ""
-            )
+            "bitrix:news.list",
+            "partners",
+            array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "N",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "N",
+                "DISPLAY_DATE" => "N",
+                "DISPLAY_NAME" => "N",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "N",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "IBLOCK_ID" => "10",
+                "IBLOCK_TYPE" => "kovka5",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "10",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PAGER_TITLE" => "Слайдер зала",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "PROPERTY_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "SET_BROWSER_TITLE" => "N",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "N",
+                "SET_META_KEYWORDS" => "N",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "N",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "STRICT_SECTION_CHECK" => "N",
+                "COMPONENT_TEMPLATE" => "partners"
+            ),
+            false
         );?>
     </main>
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <h4>© BIG ELEPHANT GROUP</h4>
-                    <p class="footer__p">Производство мебели одно из&nbsp;наших приоритетных направлений деятельности. Мы&nbsp;делаем качественную корпусную и&nbsp;индивидуальную мебель под все требования и&nbsp;пожелания заказчика. Только лучшие материалы и&nbsp;слаженная работа коллектива дают прекрасный результат и&nbsp;довольных клиентов.</p>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/bitrix/templates/".SITE_TEMPLATE_ID."/include/footer__copyright.php"
+                        )
+                    );?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <h4>КОНТАКТЫ</h4>
-
-                    <p><b>Адрес:</b><br>
-                        г. Астана, 010000, ул. Жанажол, 4</p>
-
-                    <p><b>Телефон:</b><br>
-                        +7 747 676 05 49</p>
-
-                    <p><b>Электронная почта:</b><br>
-                        <a href="mailto:bigelephant5@yandex.kz">bigelephant5@yandex.kz</a></p>
+                <div class="col-lg-3 col-lg-offset-1 col-md-offset-0 col-md-4 col-sm-4 col-xs-12">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/bitrix/templates/".SITE_TEMPLATE_ID."/include/footer__contacts.php"
+                        )
+                    );?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-lg-offset-1 col-md-offset-0 col-md-4 col-sm-4 col-xs-12">
                     <h4>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h4>
                     <a class="footer__social" href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/fb.svg" alt=""></a>
                     <a class="footer__social" href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/inst.svg" alt=""></a>
                     <a class="footer__social" href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/vk.svg" alt=""></a>
                     <a class="footer__social" href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/youtube.svg" alt=""></a>
-                    <br>
-                    <br>
-                    <h4>МЫ ПРИНИМАЕМ К ОПЛАТЕ</h4>
-                    <div class="accept-payment">
-                        <div class="accept-payment__item">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/visa.svg" alt="">
-                        </div>
-                        <div class="accept-payment__item">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/mastercard.svg" alt="">
-                        </div>
-                        <div class="accept-payment__item">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/maestro.svg" alt="">
-                        </div>
-                        <div class="accept-payment__item">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/american-express.svg" alt="">
-                        </div>
-                        <div class="accept-payment__item">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/unionpay.svg" alt="">
-                        </div>
-                        <div class="accept-payment__item">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/western-union.svg" alt="">
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
     </footer>
 </div>
-<?$APPLICATION->AddHeadScript("/bitrix/templates/".SITE_TEMPLATE_ID."/js/mebel5.js");?>
+<?$APPLICATION->AddHeadScript("/bitrix/templates/".SITE_TEMPLATE_ID."/js/kovka5.js");?>
 </body>
 </html>
